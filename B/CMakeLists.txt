@@ -20,4 +20,3 @@ message(STATUS "CMake: B")
 
 add_library(B SHARED B.h B.c)
 target_include_directories(B PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
-

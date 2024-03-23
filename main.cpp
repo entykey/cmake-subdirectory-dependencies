@@ -1,4 +1,6 @@
-#include <iostream>
+
+// #include <iostream>
+#include <stdio.h>
 #include "A/A.hpp"
 #include "B/B.h"
 
@@ -9,29 +11,14 @@
 extern "C" void methodB();
 
 int main() {
-    A a_instance;
+    A a_instance;   // Note class only exists in CXX
 
-    std::cout << "Calling methods from A:\n";
+    printf("Calling methods from A:\n");
     a_instance.methodA();
 
-    std::cout << "\nCalling methods from B:\n";
+    printf("\nCalling methods from B:\n");
     // Call methodB() from library B (C lib)
     methodB();
 
     return 0;
 }
-
-
-// If B is a CXX project
-// int main() {
-//     A a_instance;
-//     B b_instance;
-
-//     std::cout << "Calling methods from A:\n";
-//     a_instance.methodA();
-
-//     std::cout << "\nCalling methods from B:\n";
-//     b_instance.methodB();
-
-//     return 0;
-// }
